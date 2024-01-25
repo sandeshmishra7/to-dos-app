@@ -37,10 +37,28 @@ input[type='submit'] {
 }
 
 .p-style {
-    width: 58%;
+    max-width: 400px;
     margin: 0 auto;
     cursor: pointer;
     font-size: 20px;
+}
+
+.notes {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-style {
+    padding: 10px 20px;
+    margin-left: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /*media query for 995px starts here*/
