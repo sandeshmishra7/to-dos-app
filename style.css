@@ -3,6 +3,13 @@ body {
     color: #fff;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .wrapper {
     max-width: 886px;
     width: 58%;
@@ -45,10 +52,17 @@ input[type='submit'] {
     font-size: 20px;
 }
 
-.notes {
-    width: 600px;
+.notes-wrapper {
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notes {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

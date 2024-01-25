@@ -1,6 +1,6 @@
 let inputVal = document.getElementById('name');
 let form = document.querySelector('form');
-let notes = document.querySelector('.notes');
+let notesWrapper = document.querySelector('.notes-wrapper');
 
 form.addEventListener('submit', formSubmit);
 
@@ -14,12 +14,12 @@ function formSubmit(e) {
     deleteBtn.classList.add('btn-style');
     paragraph.innerText = inputVal.value;
     paragraph.classList.add('p-style');
-    notes.appendChild(paragraph);
-    notes.appendChild(deleteBtn);
+    notesWrapper.appendChild(paragraph);
+    notesWrapper.appendChild(deleteBtn);
     inputVal.value = '';
 
     deleteBtn.addEventListener('click', function () {
-        notes.removeChild(paragraph);
-        notes.removeChild(deleteBtn);
+        notesWrapper.removeChild(paragraph);
+        notesWrapper.removeChild(deleteBtn);
     });
 }
