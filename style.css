@@ -37,6 +37,7 @@ input[type='submit'] {
 }
 
 .p-style {
+    width: 58%;
     margin: 0 auto;
     cursor: pointer;
     font-size: 20px;
