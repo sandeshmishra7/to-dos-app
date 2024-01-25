@@ -1,0 +1,40 @@
+body {
+    background-image: linear-gradient(90deg, rgb(18, 20, 57), rgb(98, 98, 98));
+    color: #fff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.inp-wrapper input {
+    padding: 10px 45px 10px 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.inp-wrapper input:focus {
+    outline: none;
+}
+
+input[type='submit'] {
+    padding: 10px 20px;
+    margin-left: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.p-style {
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
