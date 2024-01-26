@@ -46,13 +46,14 @@ input[type='submit'] {
 }
 
 .p-style {
-    max-width: 400px;
+    width: 250px;
     margin: 0 auto;
     cursor: pointer;
     font-size: 20px;
 }
 
 .notes-wrapper {
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,6 +63,11 @@ input[type='submit'] {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+}
+
+.checkbox-style {
+    width: 25px;
+    height: 25px;
 }
 
 .btn-style {
