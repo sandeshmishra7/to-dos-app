@@ -75,10 +75,24 @@ input[type='submit'] {
     margin-left: 5px;
     border: 1px solid #000;
     background-color: #fff;
-    color: #000;
     border-radius: 5px;
+    color: #000;
     cursor: pointer;
 }
 
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {}
+@media only screen and (max-width: 995px) {
+    .p-style {
+        width: 100px;
+    }
+
+    .btn-style {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+
+    .checkbox-style {
+        width: 18px;
+        height: 18px;
+    }
+}
