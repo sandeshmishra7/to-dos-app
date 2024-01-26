@@ -39,7 +39,7 @@ function formSubmit(e) {
         inputVal.value = '';
     }
     else {
-         alert('Please enter some value');
+        alert('Please enter some value');
     }
 
     deleteBtn.addEventListener('click', function () {
