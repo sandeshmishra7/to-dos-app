@@ -50,6 +50,7 @@ input[type='submit'] {
     margin: 0 auto;
     cursor: pointer;
     font-size: 20px;
+    font-family: cursive;
     text-transform: capitalize;
 }
 
