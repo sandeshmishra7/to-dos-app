@@ -24,6 +24,7 @@ function formSubmit(e) {
     checkbox.classList.add('checkbox-style');
 
     paragraph.type = 'text';
+    paragraph.setAttribute('disabled', true);
     paragraph.value = inputVal.value.trim();
 
     edit.innerText = 'Edit';
@@ -58,6 +59,7 @@ function formSubmit(e) {
 
     edit.addEventListener('click', function () {
         paragraph.setAttribute('contenteditable', true);
+        paragraph.removeAttribute('disabled');
         paragraph.focus();
         paragraph.setSelectionRange(paragraph.value.length, paragraph.value.length);
     });
@@ -69,6 +71,9 @@ function formSubmit(e) {
             notesWrapper.removeChild(edit);
             notesWrapper.removeChild(deleteBtn);
             notes.removeChild(notesWrapper);
+        }
+        else {
+            paragraph.setAttribute('disabled', true);
         }
     })
 
