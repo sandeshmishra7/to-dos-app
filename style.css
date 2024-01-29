@@ -78,10 +78,18 @@ input[type='submit'] {
 .p-style {
     width: 250px;
     margin: 0 auto;
+    border: 0;
+    color: #fff;
     cursor: pointer;
     font-size: 20px;
     font-family: cursive;
     text-transform: capitalize;
+    background-color: transparent;
+}
+
+.p-style:focus{
+    outline: 0;
+    border: 0;
 }
 
 .notes-wrapper {
@@ -121,6 +129,10 @@ input[type='submit'] {
     border-radius: 5px;
     color: #000;
     cursor: pointer;
+}
+
+.inp-style{
+    padding: 10px 20px;
 }
 
 .cancel {
