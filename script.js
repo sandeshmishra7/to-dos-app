@@ -2,11 +2,12 @@ let inputVal = document.getElementById('name');
 let form = document.querySelector('form');
 let notes = document.querySelector('.notes');
 
+showTodos();
 form.addEventListener('submit', formSubmit);
 
 function formSubmit(e) {
     e.preventDefault();
-
+    let newArr = [];
     // Creating elements
     var paragraph = document.createElement('input');
     var deleteBtn = document.createElement('div');
@@ -24,6 +25,7 @@ function formSubmit(e) {
     checkbox.classList.add('checkbox-style');
 
     paragraph.type = 'text';
+    paragraph.id = 'pid';
     paragraph.setAttribute('disabled', true);
     paragraph.value = inputVal.value.trim();
 
@@ -84,4 +86,44 @@ function formSubmit(e) {
         notesWrapper.removeChild(deleteBtn);
         notes.removeChild(notesWrapper);
     });
+
+    // Adding todos to local storage
+    let todosList = localStorage.getItem('todos');
+    if (todosList === null) {
+        todosObj = [];
+    }
+    else {
+        todosObj = JSON.parse(todosList);
+    }
+
+    todosObj.push(paragraph.value);
+    localStorage.setItem('todos', JSON.stringify(todosObj));
+    console.log(todosObj);
+
+    showTodos();
+    newArr = todosObj;
+}
+
+// Function to display notes from storage
+function showTodos() {
+    let todosList = localStorage.getItem('todos');
+    if (todosList === null) {
+        todosObj = [];
+    }
+    else {
+        todosObj = JSON.parse(todosList);
+    }
+
+    let str = '';
+    todosObj.forEach(element => {
+        str += `<div class="notes-wrapper"><input class="p-style" type="text" id="pid" disabled="true">${element}
+        <input class="checkbox-style" type="checkbox" name="name" value="value" id="id"><div class="btn-style">Edit</div><div class="btn-style">Delete Note</div></div>`
+    });
+
+    let todosElm = document.querySelector('.notes');
+    if (todosObj.length != 0) {
+        todosElm.innerHTML = str;
+    } else {
+        todosElm.innerHTML = `Nothing to show! Use "Enter Note" section above to add todos.`;
+    }
 }
